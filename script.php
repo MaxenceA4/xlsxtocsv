@@ -1,7 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once 'SimpleXLSX.php';
-    $firstrow=0;
     $files = array(); // Array to store the names of the CSV files
     if ( $xlsx = SimpleXLSX::parse($_FILES["fileToUpload"]["tmp_name"]) ) {
         // Get the total number of sheets
